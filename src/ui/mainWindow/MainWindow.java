@@ -4,10 +4,13 @@ import java.io.IOException;
 import java.net.URL;
 
 import javafx.application.Application;
+import javafx.application.Platform;
+import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import javafx.stage.WindowEvent;
 import main.MainTVSM;
 
 public class MainWindow extends Application {
@@ -32,6 +35,16 @@ public class MainWindow extends Application {
 		}
 
 	}
+	
+	public void setNotCloseable(boolean value){
+		Platform.setImplicitExit(false);
+		this.primaryStage.setOnCloseRequest(new EventHandler<WindowEvent>() {
+		    @Override
+		    public void handle(WindowEvent event) {
+		        event.consume();
+		    }
+		});
+	}
 
 	public void mainWindow() {
 		try {
@@ -47,7 +60,7 @@ public class MainWindow extends Application {
 
 			this.primaryStage.setScene(scene);
 			this.primaryStage.show();
-
+			
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

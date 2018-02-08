@@ -15,13 +15,13 @@ public class InformationGetterDEDDL {
 	public InformationGetterDEDDL(Serie s) {
 		this.serie = s;
 		try {
-			this.seasons = this.getInfos();
+			this.seasons = this.getSeasons();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
 
-	protected int[] getInfos() throws Exception {
+	protected int[] getSeasons() throws Exception {
 		Document doc = Jsoup.connect(this.serie.getLinks().getMovie4kString()).get();
 
 		Elements seas = doc.select("select[name=season]").get(0).children();

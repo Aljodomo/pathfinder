@@ -6,6 +6,8 @@ import java.util.Optional;
 
 import domain.Serie;
 import javafx.application.Platform;
+import javafx.collections.ObservableList;
+import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.scene.Node;
 import javafx.scene.control.Alert;
@@ -14,6 +16,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ButtonBar.ButtonData;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.Dialog;
+import javafx.scene.control.DialogEvent;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyCode;
@@ -33,13 +36,17 @@ public class OptionPanes {
 		alert.setTitle(oben);
 		alert.setHeaderText(mitte);
 		alert.setContentText(unten);
+		ObservableList<ButtonType> buttons = alert.getButtonTypes();
+		ButtonType cancelButton = buttons.get(1);
 
 		Optional<ButtonType> result = alert.showAndWait();
 		if (result.get() == ButtonType.OK) {
 			return true;
-		} else {
+		}
+		if(result.get().getText().equals(cancelButton.getText())){
 			return false;
 		}
+		return true;
 	}
 
 	public static void showConfirm(String oben, String mitte, String unten) {
