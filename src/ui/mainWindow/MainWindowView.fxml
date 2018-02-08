@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="mainPanel" minHeight="180.0" minWidth="425.0" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #043543;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.mainWindow.MainWindowController">
+   <children>
+      <Label layoutX="409.0" layoutY="18.0" prefHeight="50.0" prefWidth="149.0" text="PathFinder" textFill="#2ebd59" AnchorPane.rightAnchor="42.0" AnchorPane.topAnchor="18.0">
+         <font>
+            <Font name="Mistral" size="40.0" />
+         </font>
+      </Label>
+      <TextField fx:id="searchField" layoutX="27.0" layoutY="30.0" onKeyReleased="#handleEnterSearch" promptText="Search" style="-fx-background-color: #ebedee;" AnchorPane.leftAnchor="27.0" AnchorPane.topAnchor="30.0" />
+      <HBox id="buttonBox" layoutX="27.0" layoutY="352.0" prefHeight="39.0" prefWidth="531.0" spacing="20.0" AnchorPane.bottomAnchor="23.0" AnchorPane.leftAnchor="27.0" AnchorPane.rightAnchor="42.0">
+         <children>
+            <Button fx:id="neu" layoutX="332.0" layoutY="361.0" mnemonicParsing="false" onAction="#handleNew" onMouseClicked="#handleMouseClicked" onMouseEntered="#handleMouseEnterted" onMouseExited="#handleMouseExited" style="-fx-background-color: #043543;" text="New" textFill="#ebedee">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="edit" layoutX="92.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleEdit" onMouseClicked="#handleMouseClicked" onMouseEntered="#handleMouseEnterted" onMouseExited="#handleMouseExited" style="-fx-background-color: #043543;" text="Edit" textFill="#ebedee">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="delete" layoutX="174.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleDelete" onMouseClicked="#handleMouseClicked" onMouseEntered="#handleMouseEnterted" onMouseExited="#handleMouseExited" style="-fx-background-color: #043543;" text="Delete" textFill="#ebedee">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="details" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleHosts" onMouseClicked="#handleMouseClicked" onMouseEntered="#handleMouseEnterted" onMouseExited="#handleMouseExited" style="-fx-background-color: #043543;" text="Hosts" textFill="#ebedee">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Button>
+            <Region prefHeight="39.0" prefWidth="35.0" HBox.hgrow="ALWAYS" />
+            <Button fx:id="play" layoutX="256.0" layoutY="10.0" mnemonicParsing="false" onAction="#handlePlay" onMouseEntered="#handleMouseEnterted" onMouseExited="#handleMouseExited" prefHeight="39.0" prefWidth="95.0" style="-fx-background-color: #096c89; -fx-background-radius: 20;" text="Play" textFill="#ebedee">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+               <contextMenu>
+                  <ContextMenu id="playContextMenu">
+                    <items>
+                      <MenuItem fx:id="manuellStarten" mnemonicParsing="false" onAction="#handleManualPlay" text="Manuell Starten" />
+                        <CheckMenuItem mnemonicParsing="false" onAction="#handleClipboardMode" text="Links nur in Zwischenablage kopieren und nicht direkt öffnen" />
+                    </items>
+                  </ContextMenu>
+               </contextMenu>
+            </Button>
+         </children>
+      </HBox>
+      <ListView fx:id="listPanel" layoutX="27.0" layoutY="83.0" onKeyPressed="#handleEnterPlay" prefHeight="244.0" prefWidth="531.0" AnchorPane.bottomAnchor="73.0" AnchorPane.leftAnchor="27.0" AnchorPane.rightAnchor="42.0" AnchorPane.topAnchor="83.0">
+         <contextMenu>
+            <ContextMenu>
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#handleManualPlay" text="Manuell Starten" />
+              </items>
+            </ContextMenu>
+         </contextMenu></ListView>
+      <Label layoutX="207.0" layoutY="6.0" prefHeight="73.0" prefWidth="175.0" text="Huhu, schön dich zu sehen! :)" textFill="#ff00f6" AnchorPane.topAnchor="6.0">
+         <font>
+            <Font name="Mistral" size="17.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

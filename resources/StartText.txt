@@ -1,0 +1,30 @@
+Willkommen im PathFinder.
+
+Du solltest dir diese kleine Anleitung durchlesen,
+um keine Probleme beim Umgang mit dieser Version zu haben.
+
+1. Neu erstellen einer Serie
+Hierbei sind alle Angaben außer dem Namen optional.
+Falls die Staffel und Folge leer bleiben, wird die Staffel automatisch auf 1 und die Folge auf 0 gesetzt.
+Falls alle Links leer bleiben wird versucht diese automatisch zu erstellen. 
+In diesem Fall solltest du überprüfen ob die richtigen Links gefunden wurden.
+Du kannst dir die Links manuell per "Edit" anzeigen lassen.
+Zu Fehlern kommt es hierbei meistens nur, falls du den Namen falsch geschrieben hast, der Name nicht der offiziellen
+Bezeichnung der Serie entspricht oder es verschiedene Serien mit ähnlichen Namen gibt. Z.B. "Navy CIS" und "Navy CIS:LA".
+
+2. Hoster Favoriten Auswahl.
+Für jede Serie werden standardmäßig am Anfang die gleichen drei Favoriten festgelegt.
+Du kannst die individuellen Favoriten Hoster einer Serie über "Hosts" ändern. 
+Hierbei sind alle Favoriten sozusagen gleichwertig und es spielt nur eine bedingte Rolle in welcher Reihenfolge du diese einträgst.
+Aufgrund des großen Aufwandes gibt es nur wenige Hoster die auf Funktionallität überprüft werden.
+Darunter fallen im Moment nur "Streamcloud".
+Alle anderen Hoster werden vom System als funktionstüchtig eingestuft.
+Deshalb wird empfohlen Hoster mit implementiertem Funktionscheck in den Favoriten oben zu positionieren um keine Probleme
+beim automatischen Fortsetzten zu bekommen.
+
+3. Play
+Bei Play wird die nächste Verfügbare Folge ausgehend von deinen Favoriten aufgerufen. 
+Diese Funktion schließt Staffelübergänge mit ein.
+
+4. Manuell Starten
+Über einen rechtsklick auf die Serie oder Play kannst du eine selbstgewählte Folge Manuell Starten.
