@@ -26,8 +26,7 @@ public class SerienStream extends StreamingSite {
 
 	@Override
 	protected void generateStreamLink() throws TVShowException, IOException {
-		// SerienStream.mainPage + "/serie/stream/" +
-		// this.serie.getName().toLowerCase().replace(" ", "-")
+	  
 		if (this.serie.getLinks().getSerienstream() == null) {
 			throw new TVShowException(ErrorTyp.UNKNOWN);
 		}
@@ -73,7 +72,6 @@ public class SerienStream extends StreamingSite {
 	}
 
 	public static String searchShow(String name) {
-
 		String google = "https://www.google.de/search?q=";
 		String userAgent = "StreamingBot 0.8 (+http://example.com/bot)";
 

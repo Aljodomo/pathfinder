@@ -47,6 +47,7 @@
                     <items>
                       <MenuItem fx:id="manuellStarten" mnemonicParsing="false" onAction="#handleManualPlay" text="Manuell Starten" />
                         <CheckMenuItem mnemonicParsing="false" onAction="#handleClipboardMode" text="Links nur in Zwischenablage kopieren und nicht direkt öffnen" />
+                        <CheckMenuItem mnemonicParsing="false" onAction="#handleEnglishSelected" text="Englisch" />
                     </items>
                   </ContextMenu>
                </contextMenu>

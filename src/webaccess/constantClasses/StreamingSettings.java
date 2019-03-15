@@ -3,25 +3,26 @@ package webaccess.constantClasses;
 import java.io.Serializable;
 
 public class StreamingSettings implements Serializable {
-	private static final long serialVersionUID = 1L;
-	public String[] favoriteHoster = new String[3];
+  private static final long serialVersionUID = 1L;
+  public String[] favoriteHoster = new String[3];
+  public static String LanguageTag = "de";
 
-	public StreamingSettings(String erster, String zweiter, String dritter) {
+  public StreamingSettings(String erster, String zweiter, String dritter) {
 
-		this.favoriteHoster = new String[] { erster, zweiter, dritter };
+    this.favoriteHoster = new String[] {erster, zweiter, dritter};
 
-	}
+  }
 
-	public StreamingSettings() {
+  public StreamingSettings() {
 
-		this.favoriteHoster = null;
+    this.favoriteHoster = null;
 
-	}
+  }
 
-	public void setHoster(String erster, String zweiter, String dritter) {
+  public void setHoster(String erster, String zweiter, String dritter) {
 
-		this.favoriteHoster = new String[] { erster, zweiter, dritter };
+    this.favoriteHoster = new String[] {erster, zweiter, dritter};
 
-	}
+  }
 
 }
