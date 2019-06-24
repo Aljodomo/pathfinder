@@ -11,6 +11,7 @@ import domain.Serie;
 import main.MainTVSM;
 import sun.applet.Main;
 import webaccess.MainWebAccessController;
+import webaccess.constantClasses.StreamingSettings;
 import webaccess.constantClasses.StreamingSitesEnum;
 import webaccess.testHandeling.ErrorTyp;
 import webaccess.testHandeling.TVShowException;
@@ -21,7 +22,6 @@ public class Bs extends StreamingSite {
 
   public Bs(Serie s) {
     super(s);
-    // TODO Auto-generated constructor stub
   }
 
   @Override
@@ -61,7 +61,8 @@ public class Bs extends StreamingSite {
     String url;
     try {
       doc = Jsoup.connect(surl).get();
-      if (doc.toString().contains("Staffel nicht gefunden")) {
+      if (doc.toString().contains("Staffel nicht gefunden") 
+          || !doc.toString().contains("Staffel " + this.serie.getSeason())) {
         throw new TVShowException(ErrorTyp.SEASONNOTFOUND);
       }
     } catch (IOException e) {
@@ -77,7 +78,7 @@ public class Bs extends StreamingSite {
       throw new TVShowException(ErrorTyp.EPISODENOTFOUND);
     }
     url = url.substring(0, url.lastIndexOf("/"));
-    url = url + "/" + MainTVSM.settings.LanguageTag; // XXX Language setting
+    url = url + "/" + StreamingSettings.LanguageTag; // XXX Language setting
     return url;
   }
 

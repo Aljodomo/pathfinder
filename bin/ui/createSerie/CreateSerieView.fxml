@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#handleEnterSave" prefHeight="200.0" prefWidth="300.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.createSerie.CreateSerieController">
+  <tabs>
+    <Tab text="Serie">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #043543;">
+               <children>
+                  <VBox layoutX="14.0" layoutY="31.0" spacing="20.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="137.0" AnchorPane.topAnchor="31.0">
+                     <children>
+                        <TextField fx:id="nameField" layoutX="14.0" layoutY="31.0" promptText="Vollstädiger Name*">
+                           <tooltip>
+                              <Tooltip autoHide="true" text="Der Name stellt die offizielle Bezeichnung dar. Bitte tragen sie keine Spitznamen oder Abküzungen ein." />
+                           </tooltip>
+                        </TextField>
+                        <TextField fx:id="staffelField" layoutX="14.0" layoutY="73.0" promptText="Staffel">
+                           <tooltip>
+                              <Tooltip text="Wenn Staffel und Folge leer bleiben werden die Werte automatisch auf die erste Folge der ersten Staffel gesetzt." />
+                           </tooltip>
+                        </TextField>
+                        <TextField fx:id="folgeField" layoutX="14.0" layoutY="114.0" promptText="Folge">
+                           <tooltip>
+                              <Tooltip text="Wenn Staffel und Folge leer bleiben werden die Werte automatisch auf die erste Folge der ersten Staffel gesetzt." />
+                           </tooltip>
+                        </TextField>
+                     </children>
+                  </VBox>
+                  <Button layoutX="187.0" layoutY="31.0" mnemonicParsing="false" onAction="#handleSave" prefHeight="42.0" prefWidth="83.0" text="Save" />
+                  <Button layoutX="187.0" layoutY="104.0" mnemonicParsing="false" onAction="#handleCancel" prefHeight="42.0" prefWidth="83.0" text="Cancel" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="Links">
+         <content>
+            <ScrollPane prefViewportHeight="236.0" prefViewportWidth="300.0">
+               <content>
+                <AnchorPane prefHeight="200.0" prefWidth="300.0" style="-fx-background-color: #086883;">
+                     <children>
+                        <VBox layoutX="14.0" layoutY="31.0" prefHeight="173.0" prefWidth="257.0" spacing="20.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="29.0" AnchorPane.topAnchor="31.0">
+                           <children>
+                              <TextField fx:id="bsField" layoutX="14.0" layoutY="14.0" prefHeight="14.0" prefWidth="264.0" promptText="bs.to">
+                                 <tooltip>
+                                    <Tooltip text="Bitte den Link zur eigentlichen Serie angeben. Die Folge spielt keine Rolle." />
+                                 </tooltip>
+                              </TextField>
+                              <TextField fx:id="deddlField" layoutX="14.0" layoutY="51.0" promptText="de.ddl.me">
+                                 <tooltip>
+                                    <Tooltip text="Bitte den Link zur eigentlichen Serie angeben. Die Folge spielt keine Rolle." />
+                                 </tooltip>
+                              </TextField>
+                              <TextField fx:id="movie4kField" layoutX="14.0" layoutY="85.0" promptText="movie4k.to">
+                                 <tooltip>
+                                    <Tooltip text="Bitte den Link zur eigentlichen Serie angeben. Die Folge spielt keine Rolle." />
+                                 </tooltip>
+                              </TextField>
+                              <TextField fx:id="serienstreamField" layoutX="14.0" layoutY="122.0" promptText="serienstream.to">
+                                 <tooltip>
+                                    <Tooltip text="Bitte den Link zur eigentlichen Serie angeben. Die Folge spielt keine Rolle." />
+                                 </tooltip>
+                              </TextField>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </ScrollPane>
+         </content>
+    </Tab>
+  </tabs>
+</TabPane>
